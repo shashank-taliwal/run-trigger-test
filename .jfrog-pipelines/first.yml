@@ -1,1 +1,11 @@
-
+pipelines:
+  - name: first
+    steps:
+      - name: step1
+        type: Bash
+        configuration:
+          integrations:
+            - name: gits
+        execution:
+          onExecute:
+            - echo "Hello World"
