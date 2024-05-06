@@ -6,9 +6,49 @@ pipelines:
         configuration:
           integrations:
             - name: gits
-          nodePool: oneboxMacOS13
           runtime:
             type: host
+          nodePool: oneboxMacOS13
         execution:
           onExecute:
             - echo "Hello World"
+      - name: step2
+        type: Bash
+        configuration:
+          integrations:
+            - name: gits
+          runtime: 
+            type: host
+          inputSteps:
+            - name: step1
+          nodePool: oneboxMacOS13
+          execution:
+            onExecute:
+              - echo "Hello, World"
+      - name: step3
+        type: Bash
+        configuration:
+          integrations:
+            - name: gits
+          runtime: 
+            type: host
+          inputSteps:
+            - name: step1
+          nodePool: oneboxMacOS13
+          execution:
+            onExecute:
+              - echo "Hello, World"
+       - name: step4
+        type: Bash
+        configuration:
+          integrations:
+            - name: gits
+          runtime: 
+            type: host
+          nodePool: oneboxMacOS13
+          inputSteps:
+            - name: step2
+            - name: step3
+          execution:
+            onExecute:
+              - echo "Hello, World"
