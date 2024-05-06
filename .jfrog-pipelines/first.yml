@@ -6,6 +6,7 @@ pipelines:
         configuration:
           integrations:
             - name: gits
+          nodepool: oneboxMacOS13
         execution:
           onExecute:
             - echo "Hello World"
