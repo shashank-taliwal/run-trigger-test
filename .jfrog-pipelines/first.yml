@@ -22,9 +22,9 @@ pipelines:
           inputSteps:
             - name: step1
           nodePool: oneboxMacOS13
-          execution:
-            onExecute:
-              - echo "Hello, World"
+        execution:
+          onExecute:
+            - echo "Hello, World"
       - name: step3
         type: Bash
         configuration:
@@ -35,9 +35,9 @@ pipelines:
           inputSteps:
             - name: step1
           nodePool: oneboxMacOS13
-          execution:
-            onExecute:
-              - echo "Hello, World"
+        execution:
+          onExecute:
+            - echo "Hello, World"
       - name: step4
         type: Bash
         configuration:
@@ -49,6 +49,6 @@ pipelines:
           inputSteps:
             - name: step2
             - name: step3
-          execution:
-            onExecute:
-              - echo "Hello, World"
+        execution:
+          onExecute:
+            - echo "Hello, World"
