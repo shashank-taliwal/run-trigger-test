@@ -38,7 +38,7 @@ pipelines:
           execution:
             onExecute:
               - echo "Hello, World"
-       - name: step4
+      - name: step4
         type: Bash
         configuration:
           integrations:
