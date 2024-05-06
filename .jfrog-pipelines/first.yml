@@ -6,7 +6,6 @@ pipelines:
         configuration:
           integrations:
             - name: gits
-          nodePool: oneboxMacOS13
           runtime:
             type: host
         execution:
